@@ -1,0 +1,89 @@
+.container.main
+  .hero-unit
+    h1
+      img.kyle src="images/kyle@8x.png"
+      | +
+      img.jill src="images/jill@8x.png"
+      | +
+      img.heart src="images/heart@8x.png"
+      | =
+      span.event-title wedding
+      sup
+        a href="#fn1" id="ref1" 1
+
+    h1
+      | (10 / 12 / 13)
+
+  h1 Schedule of Events
+
+  .day
+    h2 Friday
+    h4 Dinner if you're in town.
+  .day
+    h2 Saturday
+    h4
+      | Wedding + chicanery at 
+      a href="http://www.launchfishers.com" Launch Fishers
+  .day
+    h2 Sunday
+    h4 Picnic + kickball (and related activities)
+
+  p If you are traveling from out of town, feel free to come early and/or stay late.
+
+  p
+    | We can host some people that don't mind couches and air mattresses at our house, but 
+    a href="https://plus.google.com/103201287593210138756/about?gl=us&hl=en" this nearby hotel 
+    | is also available if you are weak of body or spirit.
+
+
+  .row
+    .span12
+      h2.fancy RSVP!
+      = form_for :rsvp, '/', class: 'form-horizontal' do |f|
+
+        .control-group
+          = f.label :email, class: 'control-label'
+          .controls
+            = f.text_field :email
+
+        .control-group
+          = f.label 'Guests (including you)', class: 'control-label'
+          .controls
+            = f.number_field :guests, class: 'input-mini', value: 1
+
+        .control-group
+          = f.label :dietary_restrictions, class: 'control-label'
+          .controls
+            .option
+              img src="images/eat_anything.jpg"
+              label.radio
+                = f.radio_button :dietary_restrictions, value: :none
+                | I'll eat basically anything
+
+            .option
+              img src="images/no_meat.jpg"
+              label.radio
+                = f.radio_button :dietary_restrictions, value: :vegetarian
+                | Eating meat is baaaaaad
+
+            .option
+              img src="images/allergies.jpg"
+              label.radio
+                = f.radio_button :dietary_restrictions, value: :allergies
+                | I'm Brian Murphy, and most things will kill me      
+
+        .control-group
+          = f.label 'Special Requests', class: 'control-label'
+          .controls
+            = f.text_area :details
+
+        .control-group
+          .controls
+            = f.submit "RSVP", class: 'btn btn-primary'
+
+  hr
+
+  footer
+    sup#fn1
+      | 1. "Now what is a wedding? Well, Webster's dictionary describes a wedding as: the process of removing weeds from one's garden."
+      a href="#ref1" ↩
