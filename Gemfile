@@ -15,6 +15,7 @@ gem 'rake'
 
 # Component requirements
 gem 'sass'
+gem 'bourbon'
 gem 'slim'
 gem 'mongoid', '~> 3.0.0'
 
