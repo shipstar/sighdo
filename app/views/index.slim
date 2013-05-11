@@ -21,7 +21,7 @@
   .day
     h2 Saturday
     h4
-      | Wedding + chicanery at 
+      | Wedding + chicanery at
       a href="http://www.launchfishers.com" Launch Fishers
   .day
     h2 Sunday
@@ -30,14 +30,14 @@
   p If you are traveling from out of town, feel free to come early and/or stay late.
 
   p
-    | We can host some people that don't mind couches and air mattresses at our house, but 
-    a href="https://plus.google.com/103201287593210138756/about?gl=us&hl=en" this nearby hotel 
+    | We can host some people that don't mind couches and air mattresses at our house, but
+    a href="https://plus.google.com/103201287593210138756/about?gl=us&hl=en" this nearby hotel
     | is also available if you are weak of body or spirit.
 
 
   .row
     .span12
-      h2.fancy RSVP!
+      h2 RSVP!
       = form_for :rsvp, '/', class: 'form-horizontal' do |f|
 
         .control-group
@@ -69,7 +69,7 @@
               img src="images/allergies.jpg"
               label.radio
                 = f.radio_button :dietary_restrictions, value: :allergies
-                | I'm Brian Murphy, and most things will kill me      
+                | I'm Brian Murphy, and most things will kill me
 
         .control-group
           = f.label 'Special Requests', class: 'control-label'
