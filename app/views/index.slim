@@ -1,39 +1,44 @@
 .container.main
-  .hero-unit
-    h1
-      img.kyle src="images/kyle@8x.png"
-      | +
-      img.jill src="images/jill@8x.png"
-      | +
-      img.heart src="images/heart@8x.png"
-      | =
-      span.event-title wedding
-      sup
-        a href="#fn1" id="ref1" 1
+  .title
+    h1 WEDDING
+    h3 10 / 12 /13
 
-    h1 (10 / 12 / 13)
+  = render '_hearts'
+
+  .sprites
+    .sprite.jillian
+      img src="images/jillian@8x.png"
+      h2 Jillian
+    .sprite.kyle
+      img src="images/kyle@8x.png"
+      h2 Kyle
+
+  = render '_hearts'
 
   h1 Schedule of Events
 
-  .day
-    h2 Friday
-    h4 Dinner if you're in town.
-  .day
-    h2 Saturday
-    h4
-      | Wedding + chicanery at
+  .events
+    h2 Friday, 10/11
+    p Dinner if you're in town.
+
+    h2 Saturday, 10/12
+    p
+      | Wedding + chicanery at 
       a href="http://www.launchfishers.com" Launch Fishers
-  .day
-    h2 Sunday
-    h4 Picnic + kickball (and related activities)
+
+    h2 Sunday, 10/13
+    p Picnic + kickball (and related activities)
+
+  = render '_hearts'
 
   p If you are traveling from out of town, feel free to come early and/or stay late.
 
   p
-    | We can host some people that don't mind couches and air mattresses at our house, but
+    | We can host some people that don't mind couches and air mattresses at our house, but 
     a href="https://plus.google.com/103201287593210138756/about?gl=us&hl=en" this nearby hotel
-    | is also available if you are weak of body or spirit.
+    |  is also available if you are weak of body or spirit.
 
+  = render '_hearts'
 
   .row
     .span12
@@ -46,43 +51,25 @@
             = f.text_field :email
 
         .control-group
-          = f.label 'Guests (including you)', class: 'control-label'
+          = f.label '# attending', class: 'control-label'
           .controls
             = f.number_field :guests, class: 'input-mini', value: 1
 
         .control-group
-          = f.label :dietary_restrictions, class: 'control-label'
+          = f.label "I'll be there", class: 'control-label'
           .controls
-            .option
-              img src="images/eat_anything.jpg"
-              label.radio
-                = f.radio_button :dietary_restrictions, value: :none
-                | I'll eat basically anything
+            label.checkbox
+              | Friday
+              input type="checkbox" name="rsvp_friday"
 
-            .option
-              img src="images/no_meat.jpg"
-              label.radio
-                = f.radio_button :dietary_restrictions, value: :vegetarian
-                | Eating meat is baaaaaad
+            label.checkbox
+              | Saturday
+              input type="checkbox" name="rsvp_saturday"
 
-            .option
-              img src="images/allergies.jpg"
-              label.radio
-                = f.radio_button :dietary_restrictions, value: :allergies
-                | I'm Brian Murphy, and most things will kill me
-
-        .control-group
-          = f.label 'Special Requests', class: 'control-label'
-          .controls
-            = f.text_area :details, rows: 4, class: 'span4'
+            label.checkbox
+              | Sunday
+              input type="checkbox" name="rsvp_sunday"
 
         .control-group
           .controls
             = f.submit "RSVP", class: 'btn btn-primary'
-
-  hr
-
-  footer
-    sup#fn1
-      | 1. "Now what is a wedding? Well, Webster's dictionary describes a wedding as: the process of removing weeds from one's garden."
-      a href="#ref1" ↩
