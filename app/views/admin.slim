@@ -5,9 +5,11 @@
       th Guests
       th Attending
       th Staying with us
+      th Not Coming
     - @rsvps.each do |rsvp|
       tr
         td= rsvp.email
         td= rsvp.guests
         td= rsvp.attending
         td= rsvp.casa_wernley
+        td= rsvp.not_coming

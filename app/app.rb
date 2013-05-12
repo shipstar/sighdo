@@ -66,6 +66,8 @@ module Sighdo
     end
 
     post '/' do
+      default_params
+
       @rsvp = Rsvp.where(email: params[:rsvp][:email]).first || Rsvp.new
       @rsvp.attributes = params[:rsvp]
 
@@ -84,6 +86,18 @@ module Sighdo
       @rsvps = Rsvp.all
 
       render :admin
+    end
+
+    helpers do
+      def default_params
+        params[:rsvp].reverse_merge!({
+          'friday' => false,
+          'saturday' => false,
+          'sunday' => false,
+          'casa_wernley' => false,
+          'not_coming' => false
+        })
+      end
     end
   end
 end
