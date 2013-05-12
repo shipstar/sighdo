@@ -3,11 +3,9 @@
     tr
       th Email
       th Guests
-      th Dietary Restrictions
-      th Details
+      th Attending
     - @rsvps.each do |rsvp|
       tr
         td= rsvp.email
         td= rsvp.guests
-        td= rsvp.dietary_restrictions
-        td= rsvp.details
+        td= rsvp.attending

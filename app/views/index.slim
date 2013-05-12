@@ -1,7 +1,7 @@
 .container.main
   .title
     h1 WEDDING
-    h3 10 / 12 /13
+    h2 10 / 12 /13
 
   = render '_hearts'
 
@@ -9,9 +9,11 @@
     .sprite.jillian
       img src="images/jillian@8x.png"
       h2 Jillian
+      h2 (bride)
     .sprite.kyle
       img src="images/kyle@8x.png"
       h2 Kyle
+      h2 (groom)
 
   = render '_hearts'
 
@@ -60,15 +62,15 @@
           .controls
             label.checkbox
               | Friday
-              input type="checkbox" name="rsvp_friday"
+              input type="checkbox" name="rsvp[friday]" value="true"
 
             label.checkbox
               | Saturday
-              input type="checkbox" name="rsvp_saturday"
+              input type="checkbox" name="rsvp[saturday]" value="true"
 
             label.checkbox
               | Sunday
-              input type="checkbox" name="rsvp_sunday"
+              input type="checkbox" name="rsvp[sunday]" value="true"
 
         .control-group
           .controls
