@@ -19,7 +19,8 @@ h2 {
   -webkit-font-smoothing: antialiased;
   color: #2c3e50;
   text-shadow: -3px 0 #3498db;
-  letter-spacing: 3px; }
+  letter-spacing: 3px;
+  font-size: 3em; }
 
 p {
   margin-bottom: 20px;
@@ -53,7 +54,8 @@ table.heart-separator {
   margin: 24px auto;
   text-align: center; }
   .sprites .sprite {
-    display: inline-block; }
+    display: inline-block;
+    margin-right: 30px; }
     .sprites .sprite.kyle h2 {
       position: relative;
       left: 15px; }
