@@ -66,7 +66,8 @@ module Sighdo
     end
 
     post '/' do
-      @rsvp = Rsvp.new params[:rsvp]
+      @rsvp = Rsvp.where(email: params[:rsvp][:email]).first || Rsvp.new
+      @rsvp.attributes = params[:rsvp]
 
       if @rsvp.save
         redirect_to '/confirm'
