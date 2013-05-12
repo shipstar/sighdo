@@ -32,14 +32,21 @@ body
 
 h1
   +fancy
-  font-size: em(90)
+  font-size: em(60)
   text-align: center
   word-spacing: -10px
-  margin: 30px
+  margin: 20px 0
 
 h2
   +fancy
-  font-size: em(48)
+  font-size: em(38)
+  text-shadow: -2px 0 $lightblue
+
+h3
+  +fancy
+  font-size: em(30)
+  text-shadow: -2px 0 $lightblue
+  text-align: center
 
 p
   margin-bottom: 20px
@@ -83,10 +90,14 @@ table.heart-separator
     margin-right: 30px
 
     &.kyle
-      h2
+      h2, h3
         position: relative
         left: 15px
 
+.events
+  & > div
+    text-align: center
+    padding: 5px 10px
 form
   label.checkbox
     float: left
@@ -99,3 +110,14 @@ form
     margin-right: auto
     text-align: center
     width: 75%
+
+@media (min-width: 650px)
+  h1
+    font-size: em(90)
+  h2
+    font-size: em(48)
+  .events
+    & > div
+      text-align: center
+      padding: 0
+

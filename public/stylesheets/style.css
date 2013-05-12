@@ -15,10 +15,10 @@ h1 {
   color: #2c3e50;
   text-shadow: -3px 0 #3498db;
   letter-spacing: 3px;
-  font-size: 5.625em;
+  font-size: 3.75em;
   text-align: center;
   word-spacing: -10px;
-  margin: 30px; }
+  margin: 20px 0; }
 
 h2 {
   font-family: ONRAMP;
@@ -26,7 +26,18 @@ h2 {
   color: #2c3e50;
   text-shadow: -3px 0 #3498db;
   letter-spacing: 3px;
-  font-size: 3em; }
+  font-size: 2.375em;
+  text-shadow: -2px 0 #3498db; }
+
+h3 {
+  font-family: ONRAMP;
+  -webkit-font-smoothing: antialiased;
+  color: #2c3e50;
+  text-shadow: -3px 0 #3498db;
+  letter-spacing: 3px;
+  font-size: 1.875em;
+  text-shadow: -2px 0 #3498db;
+  text-align: center; }
 
 p {
   margin-bottom: 20px;
@@ -62,9 +73,13 @@ table.heart-separator {
   .sprites .sprite {
     display: inline-block;
     margin-right: 30px; }
-    .sprites .sprite.kyle h2 {
+    .sprites .sprite.kyle h2, .sprites .sprite.kyle h3 {
       position: relative;
       left: 15px; }
+
+.events > div {
+  text-align: center;
+  padding: 5px 10px; }
 
 form label.checkbox {
   float: left;
@@ -76,3 +91,14 @@ form label.checkbox {
   margin-right: auto;
   text-align: center;
   width: 75%; }
+
+@media (min-width: 650px) {
+  h1 {
+    font-size: 5.625em; }
+
+  h2 {
+    font-size: 3em; }
+
+  .events > div {
+    text-align: center;
+    padding: 0; } }
