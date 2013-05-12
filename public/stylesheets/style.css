@@ -11,7 +11,8 @@ h1 {
   letter-spacing: 3px;
   font-size: 5.625em;
   text-align: center;
-  word-spacing: -10px; }
+  word-spacing: -10px;
+  margin: 30px; }
 
 h2 {
   font-family: ONRAMP;
@@ -21,9 +22,9 @@ h2 {
   letter-spacing: 3px; }
 
 p {
-  font-size: 1.5em;
-  line-height: 1.25em;
-  margin-bottom: 1.25em; }
+  margin-bottom: 20px;
+  font-size: 1.125em;
+  line-height: 24px; }
 
 hr {
   color: #191f27;
@@ -31,25 +32,25 @@ hr {
   height: 2px; }
 
 .title {
-  margin: 0.25em 0;
+  margin: 4px 0;
   text-align: center; }
 
-i.icon-heart {
-  font-size: 1em;
-  margin: 0 0.125em;
-  color: crimson; }
-
 table.heart-separator {
-  width: 100%; }
+  width: 100%;
+  margin: 20px 0; }
   table.heart-separator hr {
     height: 5px; }
   table.heart-separator .hearts {
     width: 25%;
     text-align: center;
     font-size: 1.5em; }
+    table.heart-separator .hearts i.icon-heart {
+      font-size: 1em;
+      margin: 0 2px;
+      color: crimson; }
 
 .sprites {
-  margin: 1.5em auto;
+  margin: 24px auto;
   text-align: center; }
   .sprites .sprite {
     display: inline-block; }
