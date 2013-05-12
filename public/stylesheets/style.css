@@ -1,3 +1,9 @@
+@font-face {
+  font-family: ONRAMP;
+  src: url("/fonts/ONRAMP.ttf") format("truetype");
+  font-weight: normal;
+  font-style: normal; }
+
 body {
   color: #2c3e50;
   background-color: #ecf0f1;
@@ -65,8 +71,8 @@ form label.checkbox {
   padding-top: 5px;
   margin-right: 20px; }
 
-@font-face {
-  font-family: ONRAMP;
-  src: url("/fonts/ONRAMP.ttf") format("truetype");
-  font-weight: normal;
-  font-style: normal; }
+.confirmation p {
+  margin-left: auto;
+  margin-right: auto;
+  text-align: center;
+  width: 75%; }

@@ -1,5 +1,11 @@
 @import 'bourbon/bourbon'
 
+@font-face
+  font-family: ONRAMP
+  src:  url('/fonts/ONRAMP.ttf')  format('truetype')
+  font-weight: normal
+  font-style: normal
+
 $darkblue: #2c3e50
 $lightblue: #3498db
 $yellow: #f1c40f
@@ -87,8 +93,9 @@ form
     padding-top: 5px
     margin-right: 20px
 
-@font-face
-  font-family: ONRAMP
-  src:  url('/fonts/ONRAMP.ttf')  format('truetype')
-  font-weight: normal
-  font-style: normal
+.confirmation
+  p
+    margin-left: auto
+    margin-right: auto
+    text-align: center
+    width: 75%
