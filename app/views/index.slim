@@ -74,4 +74,16 @@
 
         .control-group
           .controls
+            label.checkbox
+              | I request lodging at Castle Wernley.
+              input type="checkbox" name="rsvp[casa_wernley]" value="true"
+
+        .control-group
+          .controls
+            label.checkbox
+              | I'm not coming. Your wedding is bad and you should feel bad.
+              input type="checkbox" name="rsvp[casa_wernley]" value="true"
+
+        .control-group
+          .controls
             = f.submit "RSVP", class: 'btn btn-primary'
