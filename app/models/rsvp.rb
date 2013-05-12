@@ -5,6 +5,7 @@ class Rsvp
   field :friday, type: Boolean, default: false
   field :saturday, type: Boolean, default: false
   field :sunday, type: Boolean, default: false
+  field :casa_wernley, type: Boolean, default: false
 
   def attending
     return 'All' if friday && saturday && sunday
