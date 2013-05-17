@@ -53,7 +53,7 @@
       = form_for :rsvp, '/', class: 'form-horizontal' do |f|
 
         .control-group
-          = f.label :email, class: 'control-label'
+          = f.label :name_or_email, caption: "Name or Email:", class: 'control-label'
           .controls
             = f.text_field :email
 
