@@ -1,4 +1,5 @@
 .container.admin
+  h2 Responses
   table.table.table-striped
     tr
       th Email
@@ -13,3 +14,12 @@
         td= rsvp.attending
         td= rsvp.casa_wernley
         td= rsvp.not_coming
+
+  h2 Totals
+  ul
+    - %w(Friday Saturday Sunday).each_with_index do |day, i|
+      li #{day}: #{@rsvps.select { |r| r.attending?(day) }.sum { |r| r.guests }}
+
+  p Staying with us: #{@rsvps.select { |r| r.casa_wernley }.count}
+
+  p Not coming: #{@rsvps.select { |r| r.not_coming && !r.attending? }.count}

@@ -92,6 +92,20 @@ form label.checkbox {
   text-align: center;
   width: 75%; }
 
+.admin table {
+  margin-bottom: 50px; }
+.admin ul {
+  list-style-type: none;
+  margin-left: 0;
+  margin-bottom: 20px;
+  font-size: 1.125em; }
+  .admin ul li {
+    display: inline-block; }
+    .admin ul li + li {
+      border-left: 1px solid black;
+      margin-left: 10px;
+      padding-left: 10px; }
+
 @media (min-width: 650px) {
   h1 {
     font-size: 5.625em; }

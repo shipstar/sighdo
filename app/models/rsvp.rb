@@ -18,4 +18,12 @@ class Rsvp
     ret << 'Sunday' if sunday
     ret.join(', ')
   end
+
+  def attending?(day=nil)
+    if day
+      attending =~ /#{day}|All/
+    else
+      attending != 'None'
+    end
+  end
 end
