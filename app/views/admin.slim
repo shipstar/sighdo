@@ -18,8 +18,8 @@
   h2 Totals
   ul
     - %w(Friday Saturday Sunday).each_with_index do |day, i|
-      li #{day}: #{@rsvps.select { |r| r.attending?(day) }.sum { |r| r.guests }}
+      li #{day}: #{@rsvps.select { |r| r.attending?(day) }.sum(&:guests)}
 
-  p Staying with us: #{@rsvps.select { |r| r.casa_wernley }.count}
+  p Staying with us: #{@rsvps.select { |r| r.casa_wernley }.sum(&:guests)}
 
   p Not coming: #{@rsvps.select { |r| r.not_coming && !r.attending? }.count}
